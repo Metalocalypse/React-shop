@@ -42,7 +42,7 @@ To run this project, you need to have the following installed:
 ## Setup and Running the Project
 
 ### 1. Clone the Repository
-``bash
+```bash
 git clone https://github.com/Metalocalypse/React-shop
 cd React-shop
 
