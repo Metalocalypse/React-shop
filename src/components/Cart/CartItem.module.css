@@ -1,0 +1,119 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1rem; 
+  border-bottom: 1px solid var(--card-border-color, #eee);
+  background-color: var(--card-background-color);
+  border-radius: 4px; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.item header {
+  flex-grow: 1; 
+  margin-right: 1rem; 
+  min-width: 0; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.item header h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.05rem; 
+  font-weight: 600; 
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; 
+}
+
+.price {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.itemprice {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  margin-left: 0.4rem;
+}
+
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; 
+}
+
+.quantity {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  min-width: 40px; 
+  text-align: right; 
+  margin-right: 1rem; 
+}
+
+.quantity span { 
+  font-weight: 600;
+  margin-left: 0.25rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  background-color: var(--card-border-color); 
+  color: var(--text-color);
+}
+
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--primary-color);
+  border: 1px solid var(--card-border-color);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.actions button:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border-color: var(--primary-color);
+}
+
+.actions button:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.actions button:disabled {
+  color: var(--secondary-color);
+  border-color: var(--card-border-color);
+  background-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.actions button:first-child { 
+  margin-right: 0.4rem;
+}

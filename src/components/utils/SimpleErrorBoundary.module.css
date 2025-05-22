@@ -1,0 +1,49 @@
+.errorBoundaryContainer {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px; 
+  border: 1px solid var(--error-color, #dc3545);
+  border-radius: 8px;
+  background-color: rgba(var(--error-color-rgb, 220, 53, 69), 0.05);
+  color: var(--text-color);
+  text-align: center;
+}
+.errorTitle {
+  color: var(--error-color, #dc3545);
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.errorMessageText {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.errorDetails {
+  white-space: pre-wrap;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.8em;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  border: 1px solid var(--card-border-color);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.errorDetails summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.resetButton {
+  margin-top: 20px;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.resetButton:hover {
+  background-color: var(--button-hover-background-color);
+}

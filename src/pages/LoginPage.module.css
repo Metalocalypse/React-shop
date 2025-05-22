@@ -1,0 +1,106 @@
+.loginPageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.themeSwitcherLogin {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loginForm {
+  background-color: var(--card-background-color);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: var(--product-card-shadow);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--card-border-color);
+}
+
+.loginForm h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 0.15rem rgba(var(--input-focus-border-color), 0.25);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.error {
+  color: var(--error-color);
+  background-color: rgba(var(--error-color), 0.1);
+  border: 1px solid rgba(var(--error-color), 0.3);
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .themeSwitcherLogin {
+    top: 10px;
+    right: 10px;
+  }
+  .loginForm {
+    padding: 1.5rem;
+  }
+}

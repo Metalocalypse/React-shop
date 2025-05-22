@@ -1,0 +1,88 @@
+/* src/index.css */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+body, .theme-light {
+  --background-color: #ffffff;
+  --text-color: #212529;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --header-background-color: #f8f9fa;
+  --card-background-color: #ffffff;
+  --card-border-color: #dee2e6;
+  --button-background-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-hover-background-color: #0056b3;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --error-color: #dc3545;
+  --input-border-color: #ced4da;
+  --input-focus-border-color: #80bdff;
+  --product-card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.theme-dark {
+  --background-color: #282c34;
+  --text-color: #f8f9fa;
+  --primary-color: #61dafb;
+  --secondary-color: #adb5bd;
+  --header-background-color: #20232a;
+  --card-background-color: #343a40;
+  --card-border-color: #495057;
+  --button-background-color: #61dafb;
+  --button-text-color: #20232a;
+  --button-hover-background-color: #37b5d6;
+  --link-color: #61dafb;
+  --link-hover-color: #37b5d6;
+  --error-color: #f8d7da; 
+  --input-border-color: #495057;
+  --input-focus-border-color: #61dafb;
+  --product-card-shadow: 0 2px 4px rgba(255,255,255,0.05);
+}
+
+.theme-blue { 
+  --background-color: #e7f0f9; 
+  --text-color: #0a2c4c;    
+  --primary-color: #0056b3; 
+  --secondary-color: #5ca0f2; 
+  --header-background-color: #cce0ff;
+  --card-background-color: #ffffff;
+  --card-border-color: #b4cdef;
+  --button-background-color: #0056b3;
+  --button-text-color: #ffffff;
+  --button-hover-background-color: #004494;
+  --link-color: #0056b3;
+  --link-hover-color: #004494;
+  --error-color: #b30000;
+  --input-border-color: #a9c5e8;
+  --input-focus-border-color: #0056b3;
+  --product-card-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

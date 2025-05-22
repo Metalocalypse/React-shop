@@ -1,0 +1,35 @@
+.cartAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--primary-color);
+  border: 1px solid var(--card-border-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; 
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0; 
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.cartAction:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border-color: var(--primary-color);
+}
+
+.cartAction:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.cartAction:disabled {
+  color: var(--secondary-color);
+  border-color: var(--card-border-color);
+  background-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

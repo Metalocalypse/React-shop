@@ -1,0 +1,110 @@
+.productListContainer {
+  padding: 1rem 0;
+}
+
+.productListContainer h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 2rem;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; 
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.productTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  min-height: 44px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.productDescription {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  min-height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.productPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.productActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.actionButton {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--button-background-color);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.actionButton:first-child {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+}
+.actionButton:first-child:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.detailsButton {
+  background-color: transparent;
+  color: var(--button-background-color);
+}
+.detailsButton:hover {
+  background-color: rgba(var(--button-background-color), 0.1); 
+}
+
+.centerText {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}

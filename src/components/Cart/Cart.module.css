@@ -1,0 +1,66 @@
+.cart {
+  max-width: 45rem;
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: var(--product-card-shadow, 0 4px 12px rgba(0, 0, 0, 0.15));
+  border: 1px solid var(--card-border-color);
+  margin: 2rem auto;
+}
+
+.cart h2 {
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  border-bottom: 1px solid var(--card-border-color);
+  padding-bottom: 1rem;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.emptyCartMessage {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  padding: 2rem 0;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.35rem;
+  font-weight: bold;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--card-border-color);
+  color: var(--primary-color);
+}
+
+.total span:first-child {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.cartActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--card-border-color);
+}
+
+.actionButton {
+  min-width: 130px;
+}
+
+.cartActions > .actionButton:first-child {
+  margin-right: 1rem;
+}

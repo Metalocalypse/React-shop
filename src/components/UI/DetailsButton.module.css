@@ -1,0 +1,26 @@
+.detailsButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-color); 
+  color: var(--primary-color);
+  background-color: transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  padding: 0.4rem 0.8rem; 
+  font-size: 0.9rem;    
+  line-height: 1.3;
+}
+
+.detailsButton:hover:not(:disabled) {
+  background-color: rgba(var(--primary-color-rgb, 0, 123, 255), 0.1);
+}
+
+.detailsButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
