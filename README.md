@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# React Product Display Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modular React application that allows product display, adding items to a shopping cart, login functionality, and support for multiple themes. The project is built using TypeScript and Redux for state management and is configured for easy startup using Docker Compose.
 
-Currently, two official plugins are available:
+## Application Goal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To create a modular React application with the following functionalities:
+* Login form with validation
+* Product list with the ability to add items to the cart
+* Product detail view by route
+* Support for multiple themes (without external libraries)
+* Architecture prepared for future expansion
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Login Page**: A form with username and password fields, including validation.
+    * Hardcoded credentials: `username: admin`, `password: Admin123$`
+* **Product List**: Displays products with an image, name, short description, and price. Data is fetched from the [Fake Store API](https://fakestoreapi.com/products).
+* **Product Details**: A separate page for each product, accessible via the `/products/:id` route.
+* **Shopping Cart**: Functionality for adding/removing products, viewing the total price, and an item counter. Accessible at the `/cart` route.
+* **Multi-Theme Support**: The ability to choose between at least two themes (e.g., Light, Dark, Blue, Red) that apply to the entire application without using external UI libraries. The selected theme is saved in `localStorage`.
+* **State Persistence**: The shopping cart and selected theme are saved in `localStorage` between sessions. Authentication state is also persisted.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* **React** (v18+)
+* **TypeScript**
+* **Vite** as the build tool
+* **React Router DOM** (v6) for routing
+* **Redux Toolkit** for state management
+* **Nginx** (inside a Docker container) for serving static files
+* **Docker** and **Docker Compose** for containerization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+To run this project, you need to have the following installed:
+* [Node.js](https://nodejs.org/) (recommended LTS version matching the one in `Dockerfile`, e.g., v22.x)
+* `npm` (comes with Node.js) or `yarn`
+* [Docker](https://www.docker.com/products/docker-desktop/)
+* [Docker Compose](https://docs.docker.com/compose/install/) (usually comes with Docker Desktop installation)
+
+## Setup and Running the Project
+
+### 1. Clone the Repository
+``bash
+git clone https://github.com/Metalocalypse/React-shop
+cd React-shop
+
+### 2. Running with Docker Compose (Recommended)
+This is the simplest way to run the application in a production-like environment.
+
+1.  Ensure Docker Desktop is running.
+2.  From the project root, run:
+    ```bash
+    docker-compose up --build
+    ```
+    * The `--build` option will ensure the Docker image is rebuilt if there have been changes to the `Dockerfile` or code. For subsequent runs without changes, `docker-compose up` is sufficient.
+3.  The application will be available at: **[http://localhost:8080](http://localhost:8080)**
+
+To stop the application started via Docker Compose, press `Ctrl + C` in the terminal where it's running, and then you can run:
+```bash
+docker-compose down
